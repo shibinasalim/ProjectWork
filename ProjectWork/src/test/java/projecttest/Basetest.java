@@ -32,61 +32,61 @@ import org.testng.annotations.AfterTest;
 
 public class Basetest {
 	WebDriver driver;
-@Parameters({"browser"})
-  @BeforeMethod (alwaysRun = true)
-//Is used when we want to make sure this always runs even if parameters on which this depends fails
-  public void beforeTest(@Optional ("chrome") String browser) throws IOException {
-		 
-	  	 if(browser.equalsIgnoreCase("chrome"))
-	 {
-			 driver =new ChromeDriver();
-				
-				
-	  }
-	  else if(browser.equalsIgnoreCase("edge"))
-	  {
-			 driver =new EdgeDriver();
-				
-				
-	  }
-	 driver.manage().window().maximize();
-	 
+	@Parameters({"browser"})
+	@BeforeMethod (alwaysRun = true)
+	//Is used when we want to make sure this always runs even if parameters on which this depends fails
+	public void beforeTest(@Optional ("chrome") String browser) throws IOException {
+
+		if(browser.equalsIgnoreCase("chrome"))
+		{
+			driver =new ChromeDriver();
+
+
+		}
+		else if(browser.equalsIgnoreCase("edge"))
+		{
+			driver =new EdgeDriver();
+
+
+		}
+		driver.manage().window().maximize();
+
 		driver.get(ElementUtility.readPropertiesFile("url"));
-}
+	}
 
-  
 
-  @AfterMethod
-  public void afterMethod(ITestResult result) throws IOException 
-  {
-	 
-		  if(ITestResult.FAILURE==result.getStatus())
-		  {
-			 
-		            captureScreenshot(result.getMethod().getMethodName());
-		        
-		    }
-			  
+
+	@AfterMethod
+	public void afterMethod(ITestResult result) throws IOException 
+	{
+
+		if(ITestResult.FAILURE==result.getStatus())
+		{
+
+			captureScreenshot(result.getMethod().getMethodName());
+
+		}
+
 		//  driver.quit();  
-  }	  
-  public void captureScreenshot(String method_name) {		  
-			  try{
-								
-					TakesScreenshot screenshot=(TakesScreenshot)driver;
-					String dateName = new SimpleDateFormat("yyyy_MM_dd_hh_mm").format(new java.util.Date());
-				
-					File src=screenshot.getScreenshotAs(OutputType.FILE);
-				
-						String path=Constant.screenshotpath+method_name+dateName+".png";
-					File desfile=new File(path);
-					FileUtils.copyFile(src,desfile);
-					System.out.println("Successfully captured a screenshot");
-				
-				}catch (Exception e){
-					System.out.println("Exception while taking screenshot "+e.getMessage());
-				
-		  }
-	  }
-		 
-  }
+	}	  
+	public void captureScreenshot(String method_name) {		  
+		try{
+
+			TakesScreenshot screenshot=(TakesScreenshot)driver;
+			String dateName = new SimpleDateFormat("yyyy_MM_dd_hh_mm").format(new java.util.Date());
+
+			File src=screenshot.getScreenshotAs(OutputType.FILE);
+
+			String path=Constant.screenshotpath+method_name+dateName+".png";
+			File desfile=new File(path);
+			FileUtils.copyFile(src,desfile);
+			System.out.println("Successfully captured a screenshot");
+
+		}catch (Exception e){
+			System.out.println("Exception while taking screenshot "+e.getMessage());
+
+		}
+	}
+
+}
 

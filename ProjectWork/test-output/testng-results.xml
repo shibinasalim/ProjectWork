@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="3" total="4" passed="0" failed="1" skipped="0">
+<testng-results ignored="1" total="2" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-01-15T00:48:52 GMT" name="Default suite" finished-at="2024-01-15T00:50:46 GMT" duration-ms="114122">
+  <suite started-at="2024-01-25T15:01:22 GMT" name="Default suite" finished-at="2024-01-25T15:03:14 GMT" duration-ms="111500">
     <groups>
-      <group name="regression">
-        <method signature="itemtest.searchitem()[pri:2, instance:projecttest.itemtest@543588e6]" name="searchitem" class="projecttest.itemtest"/>
-      </group> <!-- regression -->
+      <group name="smoke">
+        <method signature="estimatetest.estimateSearc()[pri:2, instance:projecttest.estimatetest@7bd4937b]" name="estimateSearc" class="projecttest.estimatetest"/>
+      </group> <!-- smoke -->
     </groups>
-    <test started-at="2024-01-15T00:48:52 GMT" name="Default test" finished-at="2024-01-15T00:50:46 GMT" duration-ms="114122">
-      <class name="projecttest.itemtest">
-        <test-method is-config="true" signature="beforeTest(java.lang.String)[pri:0, instance:projecttest.itemtest@543588e6]" started-at="2024-01-15T00:48:52 GMT" name="beforeTest" finished-at="2024-01-15T00:49:01 GMT" duration-ms="8198" status="PASS">
+    <test started-at="2024-01-25T15:01:22 GMT" name="Default test" finished-at="2024-01-25T15:03:14 GMT" duration-ms="111500">
+      <class name="projecttest.estimatetest">
+        <test-method is-config="true" signature="beforeTest(java.lang.String)[pri:0, instance:projecttest.estimatetest@7bd4937b]" started-at="2024-01-25T15:01:23 GMT" name="beforeTest" finished-at="2024-01-25T15:01:29 GMT" duration-ms="6850" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -21,28 +21,28 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTest -->
-        <test-method signature="searchitem()[pri:2, instance:projecttest.itemtest@543588e6]" started-at="2024-01-15T00:49:01 GMT" name="searchitem" finished-at="2024-01-15T00:50:46 GMT" duration-ms="105552" status="FAIL">
+        <test-method signature="estimateSearc()[pri:2, instance:projecttest.estimatetest@7bd4937b]" started-at="2024-01-25T15:01:29 GMT" name="estimateSearc" finished-at="2024-01-25T15:03:14 GMT" duration-ms="104363" status="FAIL">
           <exception class="org.openqa.selenium.TimeoutException">
             <message>
-              <![CDATA[Expected condition failed: waiting for visibility of element located by By.xpath: //table[@id='item-table']//tbody//tr//td//a[contains(text(),'Tester')] (tried for 100 second(s) with 500 milliseconds interval)
+              <![CDATA[Expected condition failed: waiting for visibility of all [[[ChromeDriver: chrome on windows (d04fe3eea571332cf15416160de79503)] -> xpath: //table[@id='monthly-estimate-table']//tbody//tr//td[2]//a[contains(text(),'Sabina')]], [[ChromeDriver: chrome on windows (d04fe3eea571332cf15416160de79503)] -> xpath: //table[@id='monthly-estimate-table']//tbody//tr//td[2]//a[contains(text(),'Sabina')]], [[ChromeDriver: chrome on windows (d04fe3eea571332cf15416160de79503)] -> xpath: //table[@id='monthly-estimate-table']//tbody//tr//td[2]//a[contains(text(),'Sabina')]], [[ChromeDriver: chrome on windows (d04fe3eea571332cf15416160de79503)] -> xpath: //table[@id='monthly-estimate-table']//tbody//tr//td[2]//a[contains(text(),'Sabina')]], [[ChromeDriver: chrome on windows (d04fe3eea571332cf15416160de79503)] -> xpath: //table[@id='monthly-estimate-table']//tbody//tr//td[2]//a[contains(text(),'Sabina')]], [[ChromeDriver: chrome on windows (d04fe3eea571332cf15416160de79503)] -> xpath: //table[@id='monthly-estimate-table']//tbody//tr//td[2]//a[contains(text(),'Sabina')]], [[ChromeDriver: chrome on windows (d04fe3eea571332cf15416160de79503)] -> xpath: //table[@id='monthly-estimate-table']//tbody//tr//td[2]//a[contains(text(),'Sabina')]], [[ChromeDriver: chrome on windows (d04fe3eea571332cf15416160de79503)] -> xpath: //table[@id='monthly-estimate-table']//tbody//tr//td[2]//a[contains(text(),'Sabina')]], [[ChromeDriver: chrome on windows (d04fe3eea571332cf15416160de79503)] -> xpath: //table[@id='monthly-estimate-table']//tbody//tr//td[2]//a[contains(text(),'Sabina')]], [[ChromeDriver: chrome on windows (d04fe3eea571332cf15416160de79503)] -> xpath: //table[@id='monthly-estimate-table']//tbody//tr//td[2]//a[contains(text(),'Sabina')]]] (tried for 100 second(s) with 500 milliseconds interval)
 Build info: version: '4.13.0', revision: 'ba948ece5b*'
 System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.19'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 120.0.6099.217, chrome: {chromedriverVersion: 120.0.6099.109 (3419140ab66..., userDataDir: C:\Users\shibi\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50033}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:50033/devtoo..., se:cdpVersion: 120.0.6099.217, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 26db649befebeb59f17e79b78ff043a8]]>
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 120.0.6099.227, chrome: {chromedriverVersion: 120.0.6099.109 (3419140ab66..., userDataDir: C:\Users\shibi\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56443}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56443/devtoo..., se:cdpVersion: 120.0.6099.227, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: d04fe3eea571332cf15416160de79503]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //table[@id='item-table']//tbody//tr//td//a[contains(text(),'Tester')] (tried for 100 second(s) with 500 milliseconds interval)
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of all [[[ChromeDriver: chrome on windows (d04fe3eea571332cf15416160de79503)] -> xpath: //table[@id='monthly-estimate-table']//tbody//tr//td[2]//a[contains(text(),'Sabina')]], [[ChromeDriver: chrome on windows (d04fe3eea571332cf15416160de79503)] -> xpath: //table[@id='monthly-estimate-table']//tbody//tr//td[2]//a[contains(text(),'Sabina')]], [[ChromeDriver: chrome on windows (d04fe3eea571332cf15416160de79503)] -> xpath: //table[@id='monthly-estimate-table']//tbody//tr//td[2]//a[contains(text(),'Sabina')]], [[ChromeDriver: chrome on windows (d04fe3eea571332cf15416160de79503)] -> xpath: //table[@id='monthly-estimate-table']//tbody//tr//td[2]//a[contains(text(),'Sabina')]], [[ChromeDriver: chrome on windows (d04fe3eea571332cf15416160de79503)] -> xpath: //table[@id='monthly-estimate-table']//tbody//tr//td[2]//a[contains(text(),'Sabina')]], [[ChromeDriver: chrome on windows (d04fe3eea571332cf15416160de79503)] -> xpath: //table[@id='monthly-estimate-table']//tbody//tr//td[2]//a[contains(text(),'Sabina')]], [[ChromeDriver: chrome on windows (d04fe3eea571332cf15416160de79503)] -> xpath: //table[@id='monthly-estimate-table']//tbody//tr//td[2]//a[contains(text(),'Sabina')]], [[ChromeDriver: chrome on windows (d04fe3eea571332cf15416160de79503)] -> xpath: //table[@id='monthly-estimate-table']//tbody//tr//td[2]//a[contains(text(),'Sabina')]], [[ChromeDriver: chrome on windows (d04fe3eea571332cf15416160de79503)] -> xpath: //table[@id='monthly-estimate-table']//tbody//tr//td[2]//a[contains(text(),'Sabina')]], [[ChromeDriver: chrome on windows (d04fe3eea571332cf15416160de79503)] -> xpath: //table[@id='monthly-estimate-table']//tbody//tr//td[2]//a[contains(text(),'Sabina')]]] (tried for 100 second(s) with 500 milliseconds interval)
 Build info: version: '4.13.0', revision: 'ba948ece5b*'
 System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.19'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 120.0.6099.217, chrome: {chromedriverVersion: 120.0.6099.109 (3419140ab66..., userDataDir: C:\Users\shibi\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50033}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:50033/devtoo..., se:cdpVersion: 120.0.6099.217, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 26db649befebeb59f17e79b78ff043a8
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 120.0.6099.227, chrome: {chromedriverVersion: 120.0.6099.109 (3419140ab66..., userDataDir: C:\Users\shibi\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56443}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56443/devtoo..., se:cdpVersion: 120.0.6099.227, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: d04fe3eea571332cf15416160de79503
 at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
 at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:230)
-at utility.WaitUtility.WaitVisibilty(WaitUtility.java:36)
-at projectpages1.itemspage.searchItem(itemspage.java:115)
-at projecttest.itemtest.searchitem(itemtest.java:28)
+at utility.WaitUtility.WaitVisibility(WaitUtility.java:42)
+at projectpages1.Estimate.searchestimation(Estimate.java:92)
+at projecttest.estimatetest.estimateSearc(estimatetest.java:26)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -76,19 +76,19 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           </exception> <!-- org.openqa.selenium.TimeoutException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- searchitem -->
-        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:projecttest.itemtest@543588e6]" started-at="2024-01-15T00:50:46 GMT" name="afterMethod" finished-at="2024-01-15T00:50:46 GMT" duration-ms="297" status="PASS">
+        </test-method> <!-- estimateSearc -->
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:projecttest.estimatetest@7bd4937b]" started-at="2024-01-25T15:03:14 GMT" name="afterMethod" finished-at="2024-01-25T15:03:14 GMT" duration-ms="255" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=searchitem status=FAILURE method=itemtest.searchitem()[pri:2, instance:projecttest.itemtest@543588e6] output={null}]]]>
+                <![CDATA[[TestResult name=estimateSearc status=FAILURE method=estimatetest.estimateSearc()[pri:2, instance:projecttest.estimatetest@7bd4937b] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-      </class> <!-- projecttest.itemtest -->
+      </class> <!-- projecttest.estimatetest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

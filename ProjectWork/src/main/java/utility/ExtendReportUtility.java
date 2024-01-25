@@ -4,7 +4,7 @@ import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 
 public class ExtendReportUtility {
-	
+
 	public static ExtentReports createExtentReports()
 	{
 		String path =System.getProperty("user.dir")+"\\extent-reports\\extent-report.html";

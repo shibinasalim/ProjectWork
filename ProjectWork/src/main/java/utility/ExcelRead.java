@@ -5,16 +5,17 @@ import java.io.IOException;
 
 import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
 import org.apache.poi.ss.usermodel.Cell;
+import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.ss.usermodel.WorkbookFactory;
 
 public class ExcelRead {
-	
 
 
-public static Object[][] getDataFromExcel(String filePath, String sheetName) throws InvalidFormatException, IOException
-			 {//here getting excel data to an 2D(3x2) array using getDataFromExcel(path,value)
+
+	public static Object[][] getDataFromExcel(String filePath, String sheetName) throws InvalidFormatException, IOException
+	{//here getting excel data to an 2D(3x2) array using getDataFromExcel(path,value)
 		// init
 		Object[][] data;
 		FileInputStream inputStream = new FileInputStream(new File(filePath));
@@ -35,12 +36,12 @@ public static Object[][] getDataFromExcel(String filePath, String sheetName) thr
 				}
 			}
 		}
-	
+
 		return data;
 	}
 
-// Get cell value at given row and column
-	
+	// Get cell value at given row and column
+
 	private static String getCellValue(Sheet sheet, int row, int col) {
 		String value = "";
 		if (sheet.getRow(row).getCell(col) == null) {
@@ -53,6 +54,30 @@ public static Object[][] getDataFromExcel(String filePath, String sheetName) thr
 		}
 		return value;
 	}
+
+	public static String getDataFromExcelrow(String filePath, String sheetName,int row_number,int column_number) throws InvalidFormatException, IOException
+	{//here getting excel data to an 2D(3x2) array using getDataFromExcel(path,value)
+		// init
+		String data="";
+		FileInputStream inputStream = new FileInputStream(new File(filePath));
+		Workbook wb = WorkbookFactory.create(inputStream);
+		Sheet s = wb.getSheet(sheetName);
+		
+
+		// sheet range
+		
+		// set data
+
+		
+				if (!getCellValue(s, 0, column_number).equals("")) {
+					data=getCellValue(s, row_number, column_number);
+				}
+		
+	
+
+		return data;
+	}
+
 
 
 
