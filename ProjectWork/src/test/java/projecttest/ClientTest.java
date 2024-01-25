@@ -18,7 +18,7 @@ import projectpages1.LoginPage;
 import utility.ExcelRead;
 import utility.fakerUtility;
 
-public class AddClientTest  extends Basetest{
+public class ClientTest  extends Basetest{
 	
 	@Test(priority=1,groups= {"smoke"})
 	public void ClientAddition() throws InvalidFormatException, IOException {

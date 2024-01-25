@@ -7,6 +7,9 @@
   <test thread-count="5" name="Test">
     <classes>
 		      <class name="projecttest.LoginTest"/>
+		      <class name="projecttest.ClientTest"/>
+		        <class name="projecttest.itemtest"/>
+		          <class name="projecttest.estimatetest"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

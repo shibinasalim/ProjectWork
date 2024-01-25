@@ -135,7 +135,7 @@ public class itemspage {
 		title.sendKeys(newvalue);
 		waitutil.WaitClickable(button_save);
 		button_save.click();
-
+		waitutil.WaitClickable(button_close);
 		button_close.click();
 		items.click();
 	

@@ -35,7 +35,7 @@ public class itemtest extends Basetest{
 		LoginPage lp=new LoginPage(driver);
 		lp.doLogin("admin@admin.com","12345678");
 		itemspage ad= new itemspage(driver);
-		String actual=ad.doUpdateItem("shibinshibina","amina");
+		String actual=ad.doUpdateItem("amina","amina");
 		String expected="amina";
 		Assert.assertEquals(actual,expected);
 	}
