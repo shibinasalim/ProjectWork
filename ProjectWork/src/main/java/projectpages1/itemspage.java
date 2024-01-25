@@ -112,7 +112,7 @@ public class itemspage {
 	By locator=By.xpath("//table[@id='item-table']//tbody//tr//td[contains(text(),'"+searchname+"')]");
 	waitutil.WaitVisibilty(locator);
 	List<WebElement> itemtable=driver.findElements(By.xpath("//table[@id='item-table']//tbody//tr//td[1]"));
-	waitutil.WaitVisibility(itemtable);
+	//waitutil.WaitVisibility(itemtable);
 	int row=elementutil.getTableDataRowCount(itemtable, searchname);
 	String actualmsg="";
 
